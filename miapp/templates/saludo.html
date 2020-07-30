@@ -1,3 +1,11 @@
-<h1>Bienvenidos</h1>
-<h2>Flor Elizabeth Cerdán León</h2>
-<h3>Lenguaje de Programación Python...</h3>
+{% extends 'layout.html' %}
+
+{% block title %}
+    saludo
+{% endblock%}
+{% block content %}
+    {{block.super}}
+    <h1>Bienvenidos</h1>
+    <h2>Flor Cerdán</h2>
+    <h3>Python....</h3>
+{% endblock %}
