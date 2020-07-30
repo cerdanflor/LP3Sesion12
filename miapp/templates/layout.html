@@ -37,12 +37,19 @@
             </li>
         </ul>
     </nav>
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
     <div id="content">
-        <h2 class="title">Titulo de contenido (de prueba)</h2>
-        {% block content %}
-        <strong> Contenido en layout (Padre)</strong>
+        <div class="box">
+          
+            {% block content %}
+            <strong> Contenido en layout (Padre)</strong>
 
-        {% endblock %}
+            {% endblock %}
+        </div>
 
     </div>
     <footer>
