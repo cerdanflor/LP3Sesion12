@@ -1,48 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8" />
 
-        <title>
-            {% block title %}
+<head>
+    <meta charset="utf-8" />
 
-            {% endblock %}
-            | Flor Cerdán
-        </title>
-        {% load static %}
-        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
-    </head>
-    <body>
-        <h1> Proyecto Web (LP3) | Flor Cerdán</h1>
-           
-            <hr/>
-            <ul>
-                <li>
-                    <a href="/inicio"> Inicio</a>
-                </li>
-                <li>
-                    <a href="/saludo"> Mensaje de Saludo</a>
-                </li>
-                <li>
-                    <a href="/rango"> Mostrar Números [a,b]</a>
-                </li>
-                <li>
-                    <a href="/rango2/10/15"> Mostrar Números [10,15]</a>
-                </li>
-            </ul>
-            <hr/>
-            <div id ="content">
-                {% block content %}
-                <strong> Contenido en layout (Padre)</strong>
+    <title>
+        {% block title %}
 
-                {% endblock %}
+        {% endblock %}
+        | Flor Cerdán
+    </title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+</head>
 
-            </div>
-            <footer>
-                UNTELS - Lenguaje de Programación III &COPY; Flor Cerdán
-            </footer>
+<body>
+    <header>
+        <div id="logotipo">
+            <img src="{% static 'images/logoDJango.png' %}" />
+            <h1>Proyecto Web (LP3)</h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="/inicio"> Inicio</a>
+            </li>
+            <li>
+                <a href="/saludo"> Mensaje de Saludo</a>
+            </li>
+            <li>
+                <a href="/rango"> Mostrar Números [a,b]</a>
+            </li>
+            <li>
+                <a href="/rango2/10/15"> Mostrar Números [10,15]</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="content">
+        <h2 class="title">Titulo de contenido (de prueba)</h2>
+        {% block content %}
+        <strong> Contenido en layout (Padre)</strong>
+
+        {% endblock %}
+
+    </div>
+    <footer>
+        UNTELS - Lenguaje de Programación III &COPY; Flor Cerdán
+    </footer>
 
 
-    </body>
+</body>
 
 </html>
