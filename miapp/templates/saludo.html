@@ -1,12 +1,12 @@
 {% extends 'layout.html' %}
 
 {% block title %}
-    saludo
+    {{titulo}}
 {% endblock%}
 {% block content %}
   
     <h1 class="title">Bienvenidos</h1>
-    <h2>Flor Cerdán</h2>
+    <h2>{{autor_saludo}}</h2>
     <h3>Python....</h3>
     {{block.super}}
 {% endblock %}
